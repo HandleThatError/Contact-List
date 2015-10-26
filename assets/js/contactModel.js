@@ -1,24 +1,22 @@
 function contact(fName, lName, sAddress, vCity, vState, vZip, vEmail, vHome, vWork, vMobile){
-	var self = this;
-	self.firstName = fName;
-	self.lastName = lName;
-	self.streetAddress = sAddress;
-	self.city = vCity;
-	self.state = vState;
-	self.zip = vZip;
-	self.email = vEmail;
-	self.home = vHome;
-	self.work = vWork;
-	self.mobile = vMobile;
+	this.firstName = fName;
+	this.lastName = lName;
+	this.streetAddress = sAddress;
+	this.city = vCity;
+	this.state = vState;
+	this.zip = vZip;
+	this.email = vEmail;
+	this.home = vHome;
+	this.work = vWork;
+	this.mobile = vMobile;
 }
 
 function viewModel() {
-	var self = this;
 
-	self.contacts = ko.observableArray([
+	this.contacts = ko.observableArray([
 		]);
 
-	self.addContact = function() {
+	this.addContact = function() {
 		var fName = document.getElementById("fName").value;
 		var lName = document.getElementById("lName").value;
 		var sAddress = document.getElementById("address").value;
@@ -33,7 +31,7 @@ function viewModel() {
 		var resultsTable = document.getElementById("resultsDiv");
 		resultsDiv.style.visibility = "visible";
 
-		self.contacts.push(new contact(fName, lName, sAddress, vCity, vState, vZip, vEmail, vHome, vWork, vMobile));
+		this.contacts.push(new contact(fName, lName, sAddress, vCity, vState, vZip, vEmail, vHome, vWork, vMobile));
 	}
 }
 
