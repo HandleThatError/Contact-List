@@ -109,6 +109,7 @@
           <th>Home</th>
           <th>Work</th>
           <th>Mobile</th>
+          <th>Delete</th>
         </tr>
       </thead>
       <tbody data-bind="foreach:contacts">
@@ -123,6 +124,7 @@
           <td><input data-bind="value: home" /></td>          
           <td><input data-bind="value: work" /></td>          
           <td><input data-bind="value: mobile" /></td>
+          <td><a href="#" data-bind="click: $root.deleteContact">X</a></td>
         </tr>
       </tbody>
     </table>

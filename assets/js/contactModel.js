@@ -33,6 +33,10 @@ function viewModel() {
 
 		this.contacts.push(new contact(fName, lName, sAddress, vCity, vState, vZip, vEmail, vHome, vWork, vMobile));
 	}
+
+	this.deleteContact = function(contact) {
+		this.contacts.remove(contact);
+	}
 }
 
 ko.applyBindings(new viewModel());
