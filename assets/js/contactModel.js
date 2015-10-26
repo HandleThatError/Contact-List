@@ -30,7 +30,8 @@ function viewModel() {
 		var vWork = document.getElementById("work").value;
 		var vMobile = document.getElementById("mobile").value;
 
-		alert("Test");
+		var resultsTable = document.getElementById("resultsDiv");
+		resultsDiv.style.visibility = "visible";
 
 		self.contacts.push(new contact(fName, lName, sAddress, vCity, vState, vZip, vEmail, vHome, vWork, vMobile));
 	}
