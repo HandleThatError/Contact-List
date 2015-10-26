@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>SequoiaCG</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-1.11.3.js"></script>
+    <script src="assets/js/knockout-3.3.0.js"></script>
+</head>
+<body>
+
+   
+<div class="container">
+<form id="form">
+    <form class="form-horizontal" role="form">
+      <div class="form-group">
+        <label class="col-sm-4 control-label">First Name:</label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" id="fName" required>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="col-sm-4 control-label">Last Name:</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="lName" placeholder="Smith" >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-4 control-label">Street Address:</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="address" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-4 control-label">City:</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="city" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-4 control-label">State:</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="state" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-4 control-label">Zip:</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="zip" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-4 control-label">Email</label>
+        <div class="col-sm-5">
+          <input type="email" class="form-control" id="email" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-4 control-label">Home</label>
+        <div class="col-sm-5">
+          <input type="tel" class="form-control" id="home">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-4 control-label">Work</label>
+        <div class="col-sm-5">
+          <input type="tel" class="form-control" id="work">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-4 control-label">Mobile</label>
+        <div class="col-sm-5">
+          <input type="tel" class="form-control" id="mobile">
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <div class="col-sm-offset-6 col-sm-5">
+            <button data-bind="click: addContact" class="submit-contact-button">Add contact</button>
+        </div>
+      </div>
+    </form>
+</form>
+</div>
+<br />
+ <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zip</th>
+                    <th>Email</th>
+                    <th>Home</th>
+                    <th>Work</th>
+                    <th>Mobile</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: contacts">
+                <tr>
+                    <td><input data-bind="value: firstName" /></td>
+                    <td><input data-bind="value: lastName" /></td>
+                    <td><input data-bind="value: streetAddress" /></td>
+                    <td><input data-bind="value: city" /></td>
+                    <td><input data-bind="value: state" /></td>
+                    <td><input data-bind="value: zip" /></td>
+                    <td><input data-bind="value: email" /></td>
+                    <td><input data-bind="value: home" /></td>
+                    <td><input data-bind="value: work" /></td>
+                    <td><input data-bind="value: mobile" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<script src="assets/js/contactModel.js"></script>
+</body>
+</html>
